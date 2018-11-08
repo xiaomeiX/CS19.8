@@ -1,0 +1,45 @@
+﻿@model IEnumerable<WebApplication6.Models.HomeModel>
+
+
+@{
+    Layout = null;
+    ViewData["Title"] = "Welcome";
+
+}
+
+<fieldset>
+    <legend>User</legend>
+    <table>
+        <tr>
+            <td> Id</td>
+            <td>
+                @ViewData["Id"];
+            </td>
+        </tr>
+        <tr>
+            <td>Last Name</td>
+            <td>
+                @ViewData["LastName"];
+            </td>
+        </tr>
+        <tr>
+            <td> First Name</td>
+            <td>
+                @ViewData["FirstName"];
+            </td>
+        </tr>
+    </table>
+    
+
+
+
+
+</fieldset>
+<h3>    @ViewData["Message"] </h3>
+<p>
+    @Html.ActionLink("Back to List", "Index")
+</p>
+
+
+
+
