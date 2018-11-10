@@ -10,19 +10,17 @@ namespace WebApplication6.Models
 
 
 
-    public class HomeModel : DbContext
+    public class HomeModel //: DbContext
     {
         public int Id { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
   
 
-        public HomeModel()
-            : base("name=HomeModel")
-        {
-        }
-
-
+        //public HomeModel()
+        //    : base("name=HomeModel")
+        //{
+        //}
     }
 }
 

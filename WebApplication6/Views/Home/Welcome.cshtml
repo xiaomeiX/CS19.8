@@ -2,44 +2,52 @@
 
 
 @{
-    Layout = null;
+   // Layout = null;
     ViewData["Title"] = "Welcome";
 
 }
+<h2>@ViewBag.Title.</h2>
+<h3>@ViewBag.Message</h3>
 
-<fieldset>
-    <legend>User</legend>
-    <table>
-        <tr>
-            <td> Id</td>
-            <td>
-                @ViewData["Id"];
-            </td>
-        </tr>
-        <tr>
-            <td>Last Name</td>
-            <td>
-                @ViewData["LastName"];
-            </td>
-        </tr>
-        <tr>
-            <td> First Name</td>
-            <td>
-                @ViewData["FirstName"];
-            </td>
-        </tr>
-    </table>
-    
-
-
-
-
-</fieldset>
-<h3>    @ViewData["Message"] </h3>
-<p>
-    @Html.ActionLink("Back to List", "Index")
-</p>
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+    <fieldset>
+        <legend>User</legend>
+        <table>
+            <tr>
+                <td> Id</td>
+                <td>
+                    @ViewData["Id"];
+                </td>
+            </tr>
+            <tr>
+                <td>Last Name</td>
+                <td>
+                    @ViewData["LastName"];
+                </td>
+            </tr>
+            <tr>
+                <td> First Name</td>
+                <td>
+                    @ViewData["FirstName"];
+                </td>
+            </tr>
+        </table>
 
 
+
+
+
+    </fieldset>
+   
+    <p>
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
 
 
